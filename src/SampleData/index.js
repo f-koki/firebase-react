@@ -15,10 +15,13 @@ class SampleData extends React.Component {
     let db = firebase.database();
     let ref = db.ref("sample/");
     let self = this;
+    console.log(db);
+    console.log(ref);
     ref
       .orderByKey()
-      .limitToFirst(10)
+      .limitToFirst(2)
       .on("value", snapshot => {
+        console.log(snapshot);
         self.setState({
           data: snapshot.val()
         });
