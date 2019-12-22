@@ -17,7 +17,7 @@ var firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
-// firebase.analytics();
+firebase.analytics();
 
 class App extends React.Component {
   render() {
